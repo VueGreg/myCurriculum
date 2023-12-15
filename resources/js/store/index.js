@@ -8,6 +8,16 @@ const store = createStore({
         getToken(state){
             return state.token
         }
+    },
+    mutations: {
+        defineTokenToNull(state){
+            state.token = null
+        }
+    },
+    actions: {
+        defineTokenToNull(context){
+            context.commit('defineTokenToNull');
+        }
     }
 })
 

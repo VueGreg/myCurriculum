@@ -2,9 +2,13 @@
 
     import { RouterView, RouterLink } from 'vue-router';
     import store from './js/store';
-    import router from './js/router'
+    import router from './js/router';
+    import { useStore } from 'vuex';
+
+    const stores = useStore();
 
     const logout = () => {
+        stores.dispatch('defineTokenToNull');
         router.push({name: 'Home'});
     }
 
