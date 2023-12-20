@@ -5,6 +5,13 @@
 </script>
 
 <template>
-    <h1>Login View</h1>
-    <LoginComponent/>
+    <LoginComponent class="component"/>
 </template>
+
+<style>
+
+    .component {
+        height: 85vh;
+    }
+
+</style>
