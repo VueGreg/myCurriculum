@@ -11,4 +11,4 @@ Route::post('login', [LoginController::class, 'login']);
 
 Route::middleware(['auth:sanctum'])->get('validation', [LoginController::class, 'validation']);
 
-Route::apiResource('profil', UserController::class);
+Route::apiResource('profil', UserController::class)->middleware(['auth:sanctum']);

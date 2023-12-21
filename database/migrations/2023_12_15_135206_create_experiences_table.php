@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('description');
             $table->date('date_start');
             $table->date('date_end');
+            $table->string('job');
 
             $table->foreignId('structures_id')
                 ->constrained()

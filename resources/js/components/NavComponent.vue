@@ -18,7 +18,7 @@
     <nav class="flex justify-between px-20 py-10 items-center bg-slate-800">
     <h1 class="text-xl text-gray-300 font-bold">WOLFF Grégory</h1>
     <ul class="flex items-center space-x-6">
-        <li class="font-semibold text-gray-300 relative link-effect py-1"><RouterLink :to="{ name: 'Home' }">Home</RouterLink></li>
+        <li class="font-semibold text-gray-300 relative link-effect py-1"><RouterLink :to="{ name: 'Home' }">Acceuil</RouterLink></li>
         <li class="font-semibold text-gray-300 relative link-effect py-1"><RouterLink :to="{ name: 'About' }">About</RouterLink></li>
         <li class="font-semibold text-gray-300 relative link-effect py-1" v-if="!store.state.token"><RouterLink :to="{ name: 'Login' }">Login</RouterLink></li>
         <li class="font-semibold text-gray-300 relative link-effect py-1" v-else @click="logout">Logout</li>

@@ -5,6 +5,7 @@ import HomeView from '@/pages/HomeView.vue';
 import AboutView from '@/pages/AboutView.vue';
 import LoginView from '@/pages/LoginView.vue';
 import DashboardView from '@/pages/DashboardView.vue';
+import ExperienceComponent from '@/components/DashBoard/ExperienceComponent.vue';
 
 const routes = [
     {
@@ -26,6 +27,13 @@ const routes = [
         path: "/dashboard",
         name: "Dashboard",
         component: DashboardView,
+        children: [
+            {
+                path:"/experiences",
+                name:"Experiences",
+                component: ExperienceComponent
+            }
+        ],
         meta: {requiresAuth: true}
     }
 ]
