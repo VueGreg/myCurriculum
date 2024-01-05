@@ -1,11 +1,13 @@
 <script setup>
 
     import { RouterView} from 'vue-router';
-    import NavComponent from './js/components/NavComponent.vue';
+    import BandComponent from './js/components/BandComponent.vue';
 
 </script>
 
 <template>
-    <NavComponent/>
-    <RouterView/>
+    <div class="flex">
+        <BandComponent/>
+        <RouterView class="w-[80%] mx-auto py-6 px-0 m-0 absolute end-[5%]"/>
+    </div>
 </template>

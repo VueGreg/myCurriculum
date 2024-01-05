@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use Illuminate\Support\Carbon;
 use App\Models\Project;
 use App\Models\Structure;
 use Illuminate\Http\Request;
@@ -25,6 +26,8 @@ class ExperienceResource extends JsonResource
             'description' => $this->description,
             'structure' => StructureResource::collection(Structure::all()),
             'projects' => ProjectResource::collection(Project::all()->where('experiences_id', $this->id)),
+            'date_start' => Carbon::create($this->date_start)->translatedFormat('d/m/Y'),
+            'date_end' => Carbon::create($this->date_end)->translatedFormat('d/m/Y'),
         ];
     }
 }
