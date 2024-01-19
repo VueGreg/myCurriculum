@@ -37,7 +37,7 @@
                     counterAuto()
                 }
             });
-        }, 500)
+        }, 100)
     }
 
     const exp = computed(() => {
@@ -56,19 +56,19 @@
 
         <ul class="list-none flex justify-around my-16">
             <li class="flex w-1/4 items-center justify-center">
-                <span class="text-[#007acc] font-bold text-2xl">{{ calc.experience }}</span>
+                <span class="text-[#007acc] font-bold text-3xl">{{ calc.experience }}</span>
                 <p class="text-slate-300 text-base ml-6">Année d'expérience {{ exp }}</p>
             </li>
             <li class="flex w-1/4 items-center justify-center">
-                <span class="text-[#007acc] font-bold text-2xl">{{ calc.project }}</span>
+                <span class="text-[#007acc] font-bold text-3xl">{{ calc.project }}</span>
                 <p class="text-slate-300 text-base ml-6">Projets réalisé</p>
             </li>
             <li class="flex w-1/4 items-center justify-center">
-                <span class="text-[#007acc] font-bold text-2xl">{{ calc.skill }}</span>
+                <span class="text-[#007acc] font-bold text-3xl">{{ calc.skill }}</span>
                 <p class="text-slate-300 text-base ml-6">Compétences aquise</p>
             </li>
             <li class="flex w-1/4 items-center justify-center">
-                <span class="text-[#007acc] font-bold text-2xl">{{ calc.recommandation }}</span>
+                <span class="text-[#007acc] font-bold text-3xl">{{ calc.recommandation }}</span>
                 <p class="text-slate-300 text-base ml-6">Recommandations</p>
             </li>
         </ul>

@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\Experience;
+use App\Models\Structure;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\ExperienceResource;
+use App\Http\Resources\StructureResource;
 
-class ExperienceController extends Controller
+class StructureController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return ExperienceResource::collection(Experience::all());
+        return StructureResource::collection(Structure::all());
     }
 
     /**
@@ -28,9 +28,9 @@ class ExperienceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Experience $experience)
+    public function show(string $id)
     {
-        return ExperienceResource::make($experience);
+        //
     }
 
     /**

@@ -43,9 +43,9 @@
             <span v-else @click="logout" class="text-[#007acc] cursor-pointer">Déconnexion</span>
 
             <div class="flex translate-y-3" v-if="store.state.token">
-                <div class="w-1/4 h-full py-4 flex justify-center items-center bg-[#1e1e1e] border-b-2 border-b-[#1e1e1e] border-t-2 border-t-[#0f0f0f] border-r-2 border-r-[#0f0f0f] hover:scale-110 hover:border-none">
+                <RouterLink :to="{ name: 'AfficherExperiences' }" class="w-1/4 h-full py-4 flex justify-center items-center bg-[#1e1e1e] border-b-2 border-b-[#1e1e1e] border-t-2 border-t-[#0f0f0f] border-r-2 border-r-[#0f0f0f] hover:scale-110 hover:border-none">
                     <font-awesome-icon class="text-white text-lg" :icon="['fas', 'briefcase']" />
-                </div>
+                </RouterLink>
                 <div class="w-1/4 h-full py-4 flex justify-center items-center bg-[#1e1e1e] border-b-2 border-b-[#1e1e1e] border-t-2 border-t-[#0f0f0f] border-r-2 border-r-[#0f0f0f] hover:scale-110 hover:border-none">
                     <font-awesome-icon class="text-white text-lg" :icon="['fas', 'diagram-project']" />
                 </div>

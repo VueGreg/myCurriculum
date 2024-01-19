@@ -7,7 +7,7 @@ import LoginView from '@/pages/LoginView.vue';
 import DashboardView from '@/pages/DashboardView.vue';
 import ExperienceView from '@/components/DashBoard/ExperienceView.vue';
 import TableExperienceComponent from '@/components/DashBoard/Experience/TableExperienceComponent.vue';
-import AddExperienceComponent from '@/components/DashBoard//Experience/AddExperienceComponent.vue';
+import EditExperienceComponent from '@/components/DashBoard/Experience/EditExperienceComponent.vue';
 
 const routes = [
     {
@@ -40,12 +40,17 @@ const routes = [
                     {
                         path:"/experiences/ajouter",
                         name:"AjouterExperience",
-                        component: AddExperienceComponent
+                        component: EditExperienceComponent
                     },
                     {
                         path:"/experiences/index",
                         name:"AfficherExperiences",
                         component: TableExperienceComponent
+                    },
+                    {
+                        path:"/experience/:id",
+                        name:"AfficherUneExperience",
+                        component: EditExperienceComponent
                     }
                 ]
             }

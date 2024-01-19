@@ -24,10 +24,11 @@ class ExperienceResource extends JsonResource
             'id' => $this->id,
             'type' => TypeExperience::select('type')->where('id' , $this->type_experiences_id)->get(),
             'description' => $this->description,
-            'structure' => StructureResource::collection(Structure::all()),
+            'structure' => StructureResource::collection(Structure::all()->where('id', $this->id)),
             'projects' => ProjectResource::collection(Project::all()->where('experiences_id', $this->id)),
             'date_start' => Carbon::create($this->date_start)->translatedFormat('d/m/Y'),
             'date_end' => Carbon::create($this->date_end)->translatedFormat('d/m/Y'),
+            'job' => $this->job,
         ];
     }
 }
